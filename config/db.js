@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
 
+dotenv.config();
 //cloud
-const uri ="mongodb+srv://anjaneyacharyregoju:GZx0ONLlzY3FBgBW@sampledb.0a8taio.mongodb.net/"
+const uri = process.env.mongoDB_URI;
+// const uri ="mongodb+srv://anjaneyacharyregoju:GZx0ONLlzY3FBgBW@sampledb.0a8taio.mongodb.net/"
 // const uri ="mongodb://localhost:27017/"
 async function connectDB() {
 

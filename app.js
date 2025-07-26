@@ -3,8 +3,13 @@ const app = express();
 const todoRoutes = require('./routes/todoRoute.js'); 
 const {connectDB}=require('./config/db.js')
 const cors = require("cors")
-    
-    
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+
+// console.log("process......", process.env);
+
 connectDB();
 // middleware
 app.use(express.json());
