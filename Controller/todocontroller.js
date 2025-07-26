@@ -3,6 +3,8 @@ const {TodosModel } = require("../models/todoSchema.js");
 
 const getAllTodos = async (req, res) => {
     try {
+        
+
         const todosData = await TodosModel.find();
         res.status(200).json({ message: "Todos", data: todosData })
 
